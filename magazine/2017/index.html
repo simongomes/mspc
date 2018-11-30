@@ -9,6 +9,7 @@
   <head>
     <title>প্রতীক (৫ম সংখ্যা) ২০১৭</title>
     <meta name="viewport" content="width = 1050, user-scalable = no" />
+    <link rel="stylesheet" href="css/basic.css" />
     <script type="text/javascript" src="extras/jquery.min.1.7.js"></script>
     <script
       type="text/javascript"
@@ -16,6 +17,7 @@
     ></script>
     <script type="text/javascript" src="extras/modernizr.2.5.3.min.js"></script>
     <script type="text/javascript" src="lib/hash.js"></script>
+    <script type="text/javascript" src="lib/turn.js"></script>
   </head>
   <body>
     <div class="flipbook-viewport">
@@ -39,42 +41,42 @@
 
         $('.flipbook').html(pages);
 
-        function loadApp() {
-          // Create the flipbook
+        // function loadApp() {
+        // Create the flipbook
 
-          $('.flipbook').turn({
-            // Width
+        $('.flipbook').turn({
+          // Width
 
-            width: 922,
+          width: 922,
 
-            // Height
+          // Height
 
-            height: 600,
+          height: 600,
 
-            // Elevation
+          // Elevation
 
-            elevation: 50,
+          elevation: 50,
 
-            // Enable gradients
+          // Enable gradients
 
-            gradients: true,
+          gradients: true,
 
-            // Auto center this flipbook
+          // Auto center this flipbook
 
-            autoCenter: true,
-            pages: 76
-          });
-        }
+          autoCenter: true,
+          pages: 76
+        });
+        // }
 
         // Load the HTML4 version if there's not CSS transform
 
-        yepnope({
-          test: Modernizr.csstransforms,
-          yep: ['lib/turn.js'],
-          nope: ['lib/turn.html4.min.js'],
-          both: ['css/basic.css'],
-          complete: loadApp
-        });
+        // yepnope({
+        //   test: Modernizr.csstransforms,
+        //   yep: ['lib/turn.js'],
+        //   nope: ['lib/turn.html4.min.js'],
+        //   both: ['css/basic.css'],
+        //   complete: loadApp
+        // });
       })(jQuery);
     </script>
   </body>
